@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kap Textrooms</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="room container">
+    <h4>Room: <%= locals.name %></h4>
+    <form action="/room" method="post">
+      <input type="text" name="name" id="name" value="<%= locals.name %>" hidden>
+      <textarea name="content" id="content" class="room__content" style="resize: none;" placeholder="Enter Text Here..."><%= locals.content %></textarea>
+
+      <div class="room__btns">
+        <button type="submit">Save</button>
+        <a href="/" class="btn">Exit</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
